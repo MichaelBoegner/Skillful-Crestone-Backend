@@ -1,0 +1,30 @@
+{
+  "name": "skillful-crestone-backend",
+  "version": "1.0.0",
+  "description": "Supporting the frontend Crestone-Skills-Services",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "run": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichaelBoegner/Skillful-Crestone-Backend.git"
+  },
+  "keywords": [
+    "back",
+    "end",
+    "crestone",
+    "skillful",
+    "services"
+  ],
+  "author": "MichaelBoegner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MichaelBoegner/Skillful-Crestone-Backend/issues"
+  },
+  "homepage": "https://github.com/MichaelBoegner/Skillful-Crestone-Backend#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
