@@ -1,9 +1,26 @@
 const express = require('express')
-const { Client } = require('pg')
+const cors = require('cors')
 const app = express()
 const port = 3000
+// const { Client } = require('pg')
 
-// const client = new Client ({
+app.use(cors());
+
+var corsOptions = {
+  origin: 'http://localhost:8080',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+};
+
+app.get('/something', cors(corsOptions), (req, res) => {
+          res.send('hello fools')
+      })
+
+app.listen(port, () => console.log(`Skillful Crestone Server listening at http://localhost:${port}`))
+
+
+
+
+        // const client = new Client ({
 //     user: 'David',
 //     host: 'http://localhost:',
 //     database: 'softylofty',
@@ -14,8 +31,3 @@ const port = 3000
 // app.post('/create-user', (req, res) => res.send(
 //         client() 
 //     ))
-
-app.get('/', (req, res) => res.send(
-        "Hello is this working" 
-))
-app.listen(port, () => console.log(`Skillful Crestone Server listening at http://localhost:${port}`))
