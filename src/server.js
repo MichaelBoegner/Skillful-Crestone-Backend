@@ -12,15 +12,13 @@ var corsOptions = {
 };
 
 app.get('/something', cors(corsOptions), (req, res) => {
-        res.send("hello fools");
-      });
+  res.send("hello fools");
+});
+
+app.post('/new-user', (req, res) => {
+  res.send("new-user firing with the following reqs received\n\n" + req);
+});
 
 app.listen(port, () => console.log(`Skillful Crestone Server listening at http://localhost:${port}`));
-
-
-app.post('/create-user', (req, res) => {
-        res.send("create-user firing with the following reqs received\n\n" + req);
-      });
-
 
 
