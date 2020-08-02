@@ -12,14 +12,14 @@ export const
 // pool.query('SELECT NOW()', (err, res) => {
 //   console.log(err, res)
 // })
-const client = new Client({
+export const client = new Client({
   user: 'postgres',
   host: 'localhost',
-  database: 'diemotherfuckersdie',
+  database: 'softylofty',
   password: 'postgres',
   port: 5434,
 })
 client.connect()
-client.query('CREATE TABLE CaptainOfTheAssHatsBrigades (user_id serial PRIMARY KEY,username VARCHAR ( 50 ) UNIQUE NOT NULL,password VARCHAR ( 50 ) NOT NULL,email VARCHAR ( 255 ) UNIQUE NOT NULL,created_on TIMESTAMP NOT NULL,last_login TIMESTAMP);'), (err, res) => {
+client.query('CREATE TABLE softycreamy (user_id serial PRIMARY KEY,username VARCHAR ( 50 ) UNIQUE NOT NULL,password VARCHAR ( 50 ) NOT NULL,email VARCHAR ( 255 ) UNIQUE NOT NULL,created_on TIMESTAMP NOT NULL,last_login TIMESTAMP);'), (err, res) => {
   console.log(err, res)
 }
